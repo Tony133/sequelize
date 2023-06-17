@@ -10,6 +10,8 @@ import { DEFAULT_CONNECTION_NAME } from '../sequelize.constants';
 const logger = new Logger('SequelizeModule');
 
 /**
+ * @publicApi
+ * 
  * This function generates an injection token for an Repostiory
  * @param {Function} This parameter can either be a Repostiory
  * @param {string} [connection='default'] Connection name
@@ -27,6 +29,8 @@ export function getModelToken(
 }
 
 /**
+ * @publicApi
+ * 
  * This function returns a Connection injection token for the given SequelizeModuleOptions or connection name.
  * @param {SequelizeModuleOptions | string} [connection='default'] This optional parameter is either
  * a SequelizeModuleOptions or a string.
@@ -45,6 +49,8 @@ export function getConnectionToken(
 }
 
 /**
+ * @publicApi
+ * 
  * This function returns a Connection prefix based on the connection name
  * @param {SequelizeModuleOptions | string} [connection='default'] This optional parameter is either
  * a SequelizeModuleOptions or a string.
@@ -90,6 +96,9 @@ export function handleRetry(
     );
 }
 
+/**
+ * @publicApi
+ */
 export function getConnectionName(options: SequelizeModuleOptions) {
   return options && options.name ? options.name : DEFAULT_CONNECTION_NAME;
 }

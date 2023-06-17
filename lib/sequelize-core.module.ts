@@ -27,6 +27,7 @@ import {
   SEQUELIZE_MODULE_OPTIONS,
 } from './sequelize.constants';
 
+
 @Global()
 @Module({})
 export class SequelizeCoreModule implements OnApplicationShutdown {
